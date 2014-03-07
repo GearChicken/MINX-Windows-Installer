@@ -103,19 +103,23 @@ namespace MINX_Installer
                 ExtractZipWithOverwrite("../../../../headers.zip", Path.Combine(vs2010Dir, "include/"));
                 //ZipFile.ExtractToDirectory("headers.zip", Path.Combine(vs2010Dir, "include"));
                 ExtractZipWithOverwrite("../../../../libs.zip", Path.Combine(vs2010Dir, "lib/"));
+                consoleBox.AppendText("MINX for Visual Studio 2010 Installed!\n");
             }
             if (vs12Checkbox.Checked)
             {
                 consoleBox.AppendText("Installing MINX for Visual Studio 2012\n");
                 ExtractZipWithOverwrite("../../../../headers.zip", Path.Combine(vs2012Dir, "include/"));
                 ExtractZipWithOverwrite("../../../../libs.zip", Path.Combine(vs2012Dir, "lib/"));
+                consoleBox.AppendText("MINX for Visual Studio 2012 Installed!\n");
             }
             if (vs13Checkbox.Checked)
             {
                 consoleBox.AppendText("Installing MINX for Visual Studio 2013\n");
                 ExtractZipWithOverwrite("../../../../headers.zip", Path.Combine(vs2013Dir, "include/"));
                 ExtractZipWithOverwrite("../../../../libs.zip", Path.Combine(vs2013Dir, "lib/"));
+                consoleBox.AppendText("MINX for Visual Studio 2013 Installed!\n");
             }
+            MessageBox.Show("Installation Complete!");
         }
         private void ExtractZipWithOverwrite(string location, string destination)
         {
